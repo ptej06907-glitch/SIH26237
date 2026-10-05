@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const hostedExport = process.env.SOURCEX_WEB_EXPORT === "1";
+const nextConfig: NextConfig = hostedExport ? {
+  reactStrictMode: true,
+  poweredByHeader: false,
+  output: "export",
+  trailingSlash: true,
+} : {
   reactStrictMode: true,
   poweredByHeader: false,
   async headers() {

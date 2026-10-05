@@ -28,12 +28,15 @@ if system.crypto and system.ledger and (not system.store.recipients() or not sys
 
 app = FastAPI(title="SIH26237 Secure Document Provenance", version="0.1.0",
               description="Offline standards-based research prototype. Not an official Ministry of Defence deployment.")
-app.add_middleware(CORSMiddleware, allow_origins=["http://127.0.0.1:3000", "http://localhost:3000"],
+PUBLIC_ORIGIN = (os.getenv("SOURCEX_PUBLIC_ORIGIN") or os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/")
+ALLOWED_ORIGINS = {"http://127.0.0.1:3000", "http://localhost:3000"}
+if PUBLIC_ORIGIN:
+    ALLOWED_ORIGINS.add(PUBLIC_ORIGIN)
+app.add_middleware(CORSMiddleware, allow_origins=sorted(ALLOWED_ORIGINS),
                    allow_credentials=True, allow_methods=["GET", "POST"],
                    allow_headers=["Content-Type", "X-CSRF-Token"])
 
 COOKIE_NAME = "sih26237_session"
-ALLOWED_ORIGINS = {"http://127.0.0.1:3000", "http://localhost:3000"}
 
 
 @app.middleware("http")
@@ -146,7 +149,7 @@ def login(payload: LoginInput, response: Response, request: Request):
         raise HTTPException(status_code=401, detail="Invalid account or password")
     token, session = result
     response.set_cookie(COOKIE_NAME, token, max_age=8 * 3600, httponly=True,
-                        secure=False, samesite="strict", path="/")
+                        secure=os.getenv("SOURCEX_HOSTED") == "1", samesite="strict", path="/")
     return system.auth.public_session(session)
 
 

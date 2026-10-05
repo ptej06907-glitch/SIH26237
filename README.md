@@ -2,6 +2,10 @@
 
 **SIH 2026 Prototype — Not an official Ministry of Defence deployment.** Standards-based research prototype for fictional identities and synthetic PDFs. Do not upload classified or sensitive real material.
 
+For a judge-accessible link, see [hosted demo deployment](docs/HOSTED_DEMO.md).
+The online copy is not air-gapped and uses temporary storage; the local run
+remains the reference offline demonstration.
+
 This local web application demonstrates one AES-256-GCM encrypted PDF distributed to multiple recipients through separate ML-KEM-768 key envelopes. Every successful recipient decryption creates a distinct visually marked PDF, an ML-DSA-65 signed event, and a hash-linked block signed by a quorum of three local logical validators. A forensic upload detects the rendered-content watermark and checks the recipient signature, ledger chain and quorum.
 
 ## What works

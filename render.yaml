@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sourcex-sih26237
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: SOURCEX_DEMO_GATE
+        sync: false

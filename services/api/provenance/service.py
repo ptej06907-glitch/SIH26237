@@ -367,7 +367,9 @@ class Prototype:
         ledger = self.ledger.verify() if self.ledger else {"status": "UNAVAILABLE", "quorum": 0,
                                                             "total_validators": 3, "height": None,
                                                             "validators": []}
-        return {"air_gapped_mode": "CONFIGURED", "runtime_external_dependencies": 0,
+        hosted = os.getenv("SOURCEX_HOSTED") == "1"
+        return {"air_gapped_mode": "NOT APPLICABLE" if hosted else "CONFIGURED", "deployment_mode": "HOSTED DEMO" if hosted else "LOCAL OFFLINE",
+                "runtime_external_dependencies": 0,
                 "egress_test": "UNVERIFIED", "pqc_engine": "READY" if self.crypto else "ERROR",
                 "pqc_error": self.pqc_error, "watermark_engine": "READY" if self.crypto and not self.watermark_error else "ERROR",
                 "watermark_error": self.watermark_error, "ledger": ledger,

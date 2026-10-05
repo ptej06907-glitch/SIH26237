@@ -2,6 +2,7 @@
 data
 apps/web/node_modules
 apps/web/.next
+apps/web/out
 .pytest_cache
 .pytest_tmp
 **/__pycache__
