@@ -1,0 +1,8 @@
+.venv
+data
+apps/web/node_modules
+apps/web/.next
+.pytest_cache
+.pytest_tmp
+**/__pycache__
+*.pyc

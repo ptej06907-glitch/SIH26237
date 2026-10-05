@@ -1,0 +1,256 @@
+{
+  "scope": "3 synthetic PDFs x 3 issued-session candidates; digital transforms only",
+  "by_transformation": {
+    "exact": {
+      "passed": 3,
+      "total": 3
+    },
+    "rerender": {
+      "passed": 3,
+      "total": 3
+    },
+    "jpeg65": {
+      "passed": 3,
+      "total": 3
+    },
+    "scale90": {
+      "passed": 3,
+      "total": 3
+    },
+    "shift2px": {
+      "passed": 3,
+      "total": 3
+    },
+    "rotate1deg": {
+      "passed": 3,
+      "total": 3
+    },
+    "original": {
+      "passed": 3,
+      "total": 3
+    },
+    "text-only reconstruction": {
+      "passed": 3,
+      "total": 3
+    }
+  },
+  "cases": [
+    {
+      "document": "sparse",
+      "transformation": "exact",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "sparse-session-1",
+      "correlation": 1.0,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "rerender",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "sparse-session-1",
+      "correlation": 1.0,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "jpeg65",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "sparse-session-1",
+      "correlation": 0.9032,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "scale90",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "sparse-session-1",
+      "correlation": 0.9977,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "shift2px",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "sparse-session-1",
+      "correlation": 0.9992,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "rotate1deg",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "sparse-session-1",
+      "correlation": 0.9989,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "original",
+      "expected": "INCONCLUSIVE",
+      "status": "INCONCLUSIVE",
+      "matched_session_id": null,
+      "correlation": null,
+      "correct": true
+    },
+    {
+      "document": "sparse",
+      "transformation": "text-only reconstruction",
+      "expected": "INCONCLUSIVE",
+      "status": "INCONCLUSIVE",
+      "matched_session_id": null,
+      "correlation": null,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "exact",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "dense-session-1",
+      "correlation": 0.9912,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "rerender",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "dense-session-1",
+      "correlation": 0.9912,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "jpeg65",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "dense-session-1",
+      "correlation": 0.7984,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "scale90",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "dense-session-1",
+      "correlation": 0.7038,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "shift2px",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "dense-session-1",
+      "correlation": 0.9652,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "rotate1deg",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "dense-session-1",
+      "correlation": 0.7748,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "original",
+      "expected": "INCONCLUSIVE",
+      "status": "INCONCLUSIVE",
+      "matched_session_id": null,
+      "correlation": null,
+      "correct": true
+    },
+    {
+      "document": "dense",
+      "transformation": "text-only reconstruction",
+      "expected": "INCONCLUSIVE",
+      "status": "INCONCLUSIVE",
+      "matched_session_id": null,
+      "correlation": null,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "exact",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "two-page-session-1",
+      "correlation": 0.9943,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "rerender",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "two-page-session-1",
+      "correlation": 0.9943,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "jpeg65",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "two-page-session-1",
+      "correlation": 0.8128,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "scale90",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "two-page-session-1",
+      "correlation": 0.8215,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "shift2px",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "two-page-session-1",
+      "correlation": 0.9506,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "rotate1deg",
+      "expected": "VALID",
+      "status": "VALID",
+      "matched_session_id": "two-page-session-1",
+      "correlation": 0.8502,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "original",
+      "expected": "INCONCLUSIVE",
+      "status": "INCONCLUSIVE",
+      "matched_session_id": null,
+      "correlation": null,
+      "correct": true
+    },
+    {
+      "document": "two-page",
+      "transformation": "text-only reconstruction",
+      "expected": "INCONCLUSIVE",
+      "status": "INCONCLUSIVE",
+      "matched_session_id": null,
+      "correlation": null,
+      "correct": true
+    }
+  ],
+  "false_attributions": 0
+}

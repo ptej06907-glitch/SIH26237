@@ -1,0 +1,11 @@
+fastapi==0.142.2
+uvicorn==0.38.0
+python-multipart==0.0.32
+pydantic==2.13.5
+cryptography==50.0.2
+PyMuPDF==1.28.2
+numpy==2.5.3
+Pillow==12.3.0
+opencv-python-headless==5.0.0.93
+pytest==9.1.1
+httpx==0.28.1
